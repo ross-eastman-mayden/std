@@ -1,0 +1,79 @@
+main {
+    /*font-family: 'Merriweather', serif;*/
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Codystar', cursive;
+}
+
+.banner {
+  width: 98%;
+    position: fixed;
+    padding: 0px;
+    margin: auto;
+}
+
+#std {
+    padding: 0px;
+    margin: auto;
+  overflow: scroll;
+  height: 98%;
+  border: 1px solid transparent;
+}
+
+
+.center {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centertext {
+    width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3em;
+  color: white;
+  overflow: auto;
+  border: 1px dashed black;
+  background-color: #5095C3;
+}
+
+.centertext::before {
+  content: "18th June 2016"
+}
+
+.centertext::after {
+  content: "Are getting married!"
+}
+
+.addressbtn
+{   display: inline-block;
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+
+    overflow: auto;
+    border: 1px dashed black;
+    background-color: #5095C3;
+}
+
+.addressbtn:hover
+{
+    background-color: #3062a0;
+}
+
+.addressbtn > a {
+                 text-decoration: none;
+                color: white;
+             }
+
+.addressbtn > input {
+    width: inherit;
+    display: none;
+
+}
