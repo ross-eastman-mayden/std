@@ -67,7 +67,7 @@ main {
     background-color: #3062a0;
 }
 
-.addressbtn > a {
+a > .addressbtn {
                  text-decoration: none;
                 color: white;
              }
