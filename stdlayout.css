@@ -6,24 +6,15 @@ main {
 
 header {
     height: 100px;
-    position: absolute;
-    margin-left: 0px;
-    margin-right: 0px;
-    right: 0;
-    left: 0;
-
-}
-
-.banner {
+    background: #5396C2;
 
 }
 
 .banner img {
-
-    background-image: image(/banner.png);
-    background-position: center top;
-    background-repeat: repeat-x;
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
 }
 
 #std {
@@ -38,6 +29,7 @@ header {
     position: absolute;
     top: 60%;
     left: 50%;
+    overflow: auto;
     transform: translate(-50%, -50%);
 }
 
@@ -54,16 +46,17 @@ header {
     background-color: #5095C3;
 }
 
-.centertext::before {
+.centertext p::before {
     content: "18th June 2016"
 }
 
-.centertext::after {
+.centertext p::after {
     content: "Are getting married!"
 }
 
 .addressbtn {
     display: inline-block;
+    text-align: center;
     width: 100%;
     height: 100%;
     color: white;
@@ -90,10 +83,12 @@ body form {
     background-color: #5095C3;
     font-size: 1em;
     color: white;
+    overflow: auto;
 }
 
 form label {
     margin-left: 10px;
+    font-size: 1em;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
@@ -104,8 +99,9 @@ form label {
 }
 
 form input {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    font-size: 1em;
+
     margin-right: 10px;
     display: inline-block;
     position: absolute;
@@ -114,10 +110,165 @@ form input {
 }
 
 form textarea {
+    font-size: 1em;
     margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: px;
     display: inline-block;
     position: absolute;
     right: 0;
+}
+
+#addForm {
+    overflow: auto;
+}
+
+#addForm button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 2em;
+    overflow: auto;
+    border: 1px dashed black;
+    background-color: #5095C3;
+}
+#wrap  {
+    color: #0f0f0f;
+    font-size: 0.2em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#apologies{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#wrap:hover #apologies {
+    color: #0f0f0f;
+    font-size: 0.2em;
+    visibility: visible;
+    opacity: 1;
+}
+
+.calenderbtn {
+    color: #0f0f0f;
+    font-size: 0.2em;
+    position: absolute;
+    top: 10;
+    right: 5;
+}
+@media all and (max-width: 750px) {
+    .banner img {
+        visibility: hidden;
+    }
+
+    header {
+        visibility: hidden;
+    }
+    .centertext {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5em;
+        color: white;
+        overflow: auto;
+        background-color: #5095C3;
+    }
+    .addressbtn {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 2.5em;
+        overflow: auto;
+        border: 1px dashed black;
+        background-color: #5095C3;
+    }
+    body form {
+        display: inline-block;
+        width: 100%;
+        border: 1px dashed black;
+        background-color: #5095C3;
+        font-size: 0.5em;
+        color: white;
+        overflow: auto;
+    }
+
+    form label {
+        margin-left: 10px;
+        font-size: 0.5em;
+        margin-top: 10px;
+        margin-bottom: 0.5px;
+        padding: 5px;
+        overflow: auto;
+        align: left;
+        display: inline-block;
+
+    }
+
+    form input {
+        margin-top: 15px;
+        font-size: 0.5em;
+        margin-right: 10px;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+
+    }
+
+    form textarea {
+        font-size: 0.5em;
+        margin-right: 10px;
+        margin-top: 15px;
+        margin-bottom: px;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+
+
+}
+
+@media all and (max-width: 560px) {
+    .banner img {
+        visibility: hidden;
+    }
+
+    header {
+        visibility: hidden;
+    }
+    .centertext {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1em;
+        color: white;
+        overflow: auto;
+        background-color: #5095C3;
+    }
+    .addressbtn {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 1em;
+        overflow: auto;
+        border: 1px dashed black;
+        background-color: #5095C3;
+    .calenderbtn {
+        color: #0f0f0f;
+        font-size: 0.2em;
+        position: absolute;
+        margin-left: 40%;
+    }
 }

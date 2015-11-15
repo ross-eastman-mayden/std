@@ -1,57 +1,45 @@
-<html xmlns="http://www.w3.org/1999/html">
+<!DOCTYPE html>
 
+<html>
 <head>
     <title> For Your Calender </title>
     <link rel="stylesheet" type="text/css" href="stdlayout.css">
     <!--<link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>-->
     <!--<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>-->
-    <link rel="parsleysheet" type="text/css" href="parsley.css">
-    <script src="parsley.js"></script>
-    <script src="jquery.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
 </head>
-<body>
-<header>
-    <html>
-    <div class="banner"><img src="banner.png" alt="banner"></img></div>
-    </html>
-</header>
 
+<header>
+    <div class="banner"><img src="banner.png" alt="banner"></div>
+</header>
+<body>
 <main>
     <div id="std">
         <div class="center">
 
-            <body>
-            <form id="demo-form" method="post" action="form.ini.php" data-parsley-validate>
+            <form id="addForm" method="post" action="form.ini.php">
 
                 <!-- this field is just required, it would be validated on form submit -->
-                <label for="fullname">Full Name :</label>
-                <input type="text" name="fullname" required/></br>
+                <label for='[name="fullname"]'>Full Name :</label>
+                <input type="text" name="fullname" placeholder="Names separated by commas..." required/></br>
+                <label for='[name="Line1"]'>Address Line 1 - House Name/Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="address" name="Line1" placeholder="Address Line 1" required/></br>
+                <label for='[name="Line2"]'>Address Line 2 - Street Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="address" name="Line2" placeholder="Address Line 2"/></br>
+                <label for='[name=" Line3"]'>Address Line 3 - City/Town :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="address" name="Line3" placeholder="City/Town" required/></br>
+                <label for='["Line4"]'>Address Line 4 - Post Code
+                    :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="address" name="Line4" placeholder="Post Code" required/></br>
 
-                <!-- this required field must be an email, and validation will be run on
-                field change -->
-                <label for="[name=" Line-1"]">Address Line 1 - House Name/Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="address" name="Line-1" data-parsley-trigger="change" required/></br>
-                <label for="[name=" Line-2"]">Address Line 2 - Street Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="address" name="Line-2" data-parsley-trigger="change"/></br>
-                <label for="[name=" Line-3"]">Address Line 3 - City/Town :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="address" name="Line-3" data-parsley-trigger="change" required/></br>
-                <label for="[" Line-4"]">Address Line 4 - Post Code
-                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="address" name="Line-4" data-parsley-trigger="change" required/></br>
-
-                <!-- this optional textarea have a length validator that would be checked on keyup after 10 first characters, with a custom message only for minlength validator -->
                 <label for="message">Message :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <textarea name="message" data-parsley-trigger="keyup"></textarea></br>
+                <textarea name="message"></textarea></br>
 
-
-            </form>
-            <form id="demo-form" method="post" data-parsley-validate>
-                <button class="addressbtn" type="submit" style="color:white">
+                <button class="addressbtn" type="submit">
                     Save
                 </button>
             </form>
-            </body>
+
         </div>
 
     </div>

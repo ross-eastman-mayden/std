@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -5,21 +6,34 @@
     <link rel="stylesheet" type="text/css" href="stdlayout.css">
     <!--<link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>-->
     <!--<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>-->
+    <link href="atc-style-blue.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
 </head>
 
 
 <body>
+<script type="text/javascript">(function () {
+        if (window.addtocalendar)if (typeof window.addtocalendar.start == "function")return;
+        if (window.ifaddtocalendar == undefined) {
+            window.ifaddtocalendar = 1;
+            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+            s.type = 'text/javascript';
+            s.charset = 'UTF-8';
+            s.async = true;
+            s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://addtocalendar.com/atc/1.5/atc.min.js';
+            var h = d[g]('body')[0];
+            h.appendChild(s);
+        }
+    })();
+</script>
 <header>
-    <div class="banner"><img src="banner.png" alt="banner"><img src="banner.png" alt="banner"><img src="banner.png"
-                                                                                                   alt="banner"><img
-            src="banner.png" alt="banner"></img></div>
+    <div class="banner"><img src="banner.png" alt="banner"></div>
 </header>
 <main>
     <div id="std">
         <div class="center">
             <div class="centertext">
-                <p>Ross and Mary</p>
+                <p><br>Ross and Mary<br></p>
             </div>
             <a href="address.phtml" title="address">
                 <div class="addressbtn">
@@ -28,7 +42,28 @@
             </a>
         </div>
 
-    </div>
+        <div id="wrap">
+            <p>For any devs...</p>
+
+            <div id="apologies">
+                <p>"My front end skills are horrible, please forgive me. Also, this is super fragile, so don't try and
+                    enter invalid data etc, it'd be a shitshow."</p>
+            </div>
+        </div>
+        <div class="calenderbtn">
+            <span class="addtocalendar atc-style-blue">
+                <var class="atc_event">
+                    <var class="atc_date_start">2016-06-18</var>
+                    <var class="atc_date_end">2016-06-19</var>
+                    <var class="atc_timezone">Europe/London</var>
+                    <var class="atc_title">Mary and Ross's Wedding</var>
+                    <var class="atc_description">See you there!</var>
+                    <var class="atc_location">Cowburn, Latchley, Gunnislake, Cornwall, PL189AY</var>
+                    <var class="atc_organizer">Ross Eastman</var>
+                    <var class="atc_organizer_email">RossAndMarysWedding@gmail.com</var>
+                </var>
+            </span>
+        </div>
 </main>
 </body>
 
